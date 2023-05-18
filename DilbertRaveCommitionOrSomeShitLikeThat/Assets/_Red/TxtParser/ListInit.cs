@@ -18,23 +18,23 @@ public class ListInit : MonoBehaviour
     private void Start()
     {
         Debug.Log(" ===== whiteList Usernames: ===== ");
-        whiteList = Readlist(whitelistFilePath);
+        whiteList = ReadFilelist(whitelistFilePath);
         
         Debug.Log(" ===== blackList Usernames: ===== ");
-        blackList = Readlist(blacklistFilePath);
+        blackList = ReadFilelist(blacklistFilePath);
         
         Debug.Log(" ===== adminList Usernames: ===== ");
-        adminList = Readlist(adminListFilePath);
+        adminList = ReadFilelist(adminListFilePath);
         
         Debug.Log(" ===== staffList Usernames: ===== ");
-        staffList = Readlist(staffListFilePath);
+        staffList = ReadFilelist(staffListFilePath);
         
         Debug.Log(" ===== VIPList Usernames: ===== ");
-        VIPList   = Readlist(VIPListFilePath);
+        VIPList   = ReadFilelist(VIPListFilePath);
 
     }
 
-    private string[] Readlist(string _FilePath)
+    private string[] ReadFilelist(string _FilePath)
     {
         // Check if the text file exists
         if (File.Exists(_FilePath))
