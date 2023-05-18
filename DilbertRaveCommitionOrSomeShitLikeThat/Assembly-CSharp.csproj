@@ -103,7 +103,7 @@
      <Compile Include="Assets\UdonSharp\UtilityScripts\Synced\MasterToggleObject.cs" />
      <Compile Include="Assets\UdonSharp\UtilityScripts\TrackingDataFollower.cs" />
      <Compile Include="Assets\UdonSharp\UtilityScripts\WorldAudioSettings.cs" />
-     <Compile Include="Assets\_Red\TxtParser\WhileListInit.cs" />
+     <Compile Include="Assets\_Red\TxtParser\ListInit.cs" />
      <Compile Include="Assets\_Sopra&apos;s Toybox\PostProcessingUI2\U#\PPUIDesktopCheck.cs" />
      <Compile Include="Assets\_Sopra&apos;s Toybox\PostProcessingUI2\U#\PlayerDetectionProx.cs" />
      <Compile Include="Assets\_Sopra&apos;s Toybox\PostProcessingUI2\U#\SoundModule.cs" />
@@ -131,7 +131,9 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Joker is punk\Contact Me.txt" />
+     <None Include="Assets\_Red\TxtParser\AdminList.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\_Red\TxtParser\Whitelist.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\Joker is punk\Find Your Friends\version.txt" />
      <None Include="Assets\_Templar\DJCameraControl\README.txt" />
@@ -141,7 +143,9 @@
      <None Include="Assets\_Sopra&apos;s Toybox\PostProcessingUI2\READ ME.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\HandMenu\HandMenu\Shaders\BlurUI.shader" />
+     <None Include="Assets\_Red\TxtParser\VIPList.txt" />
      <None Include="Assets\Examples and Samples Have Moved.txt" />
+     <None Include="Assets\_Red\TxtParser\BlackList.txt" />
      <None Include="Assets\Joker is punk\Find Your Friends\README.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -160,6 +164,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Joker is punk\Find Your Friends\license.txt" />
+     <None Include="Assets\_Red\TxtParser\StaffList.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
