@@ -2,14 +2,11 @@
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
-
-
 public class HandMenu : UdonSharpBehaviour
 {
     public VRCPlayerApi.TrackingDataType hand;
     public Transform menuPoint;
     public Transform pcPoint;
-
     [Header("Options")]
     [Tooltip("If ture, player using vr will spawn menu in front of head like desktop")]
     public bool alwaysDesktopMode = false;
@@ -19,11 +16,10 @@ public class HandMenu : UdonSharpBehaviour
     public KeyCode vRMenuKey;
 
     private VRCPlayerApi localPlayer;
-    private bool isMenuOpen = false;
+    public bool isMenuOpen = false;
     private bool isVR = false;
 
     private Vector3 targetScale;
-
 
     private void Start()
     {
@@ -46,6 +42,7 @@ public class HandMenu : UdonSharpBehaviour
                     headPos = localPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
                     transform.position = headPos.position;
                     transform.rotation = headPos.rotation;
+                    
                 }
             }
             else

@@ -10,37 +10,41 @@ using TMPro;
 public class HidePlayerManager : UdonSharpBehaviour
 {
     [UdonSynced] private int[] hiddenPlayers = { 0 };
-    public TextMeshProUGUI hideTipText;
-    public Image hideCheckmark;
     private VRCPlayerApi lp;
     private float lastToggledTime = -100f;
+    [Header("UIBuilder")]
+    public PlayerSelectionBuilder playerSelectionBuilder;
+    [Header("UI Ref")]
+    public Image Checkmark;
 
-    public void _ToggleHideState()
+    public void _ToggleHideState()//Called by the toggle button
     {
         lp = Networking.LocalPlayer;
         Networking.SetOwner(lp, gameObject);
 
-        if (hideCheckmark.enabled)
+        if (Checkmark.enabled)
         {
             _RemoveLPFromHideArray();
-            hideCheckmark.enabled = false;
-
-            if (hideTipText)
-                hideTipText.text = "Others may teleport to you";
+            Checkmark.enabled = false;
         }
         else
         {
             _AddLPToHideArray();
-            hideCheckmark.enabled = true;
-
-            if (hideTipText)
-                hideTipText.text = "Others cannot teleport to you";
+            Checkmark.enabled = true;
         }
-
+        UpdateUI();
         lastToggledTime = Time.time;
         RequestSerialization();
     }
-
+    private void UpdateUI()
+    {
+        if(playerSelectionBuilder != null)
+        {
+            playerSelectionBuilder._Refresh();
+            playerSelectionBuilder._ShowUI();
+        }
+        
+    }
     private void _AddLPToHideArray()
     {
         int lpId = lp.playerId;
@@ -97,11 +101,9 @@ public class HidePlayerManager : UdonSharpBehaviour
         {
             // if the updates are close in time, verify that the state of the synced data matches the local player's expected state
             bool lpHiddenPerData = _IsPlayerIdHidden(lp.playerId);
-            if (lpHiddenPerData != hideCheckmark.enabled)
+            if (lpHiddenPerData != Checkmark.enabled)
             {
-                if (hideTipText)
-                    hideTipText.text = "SYNC ERROR! Please retry.";
-                hideCheckmark.enabled = lpHiddenPerData;
+                Checkmark.enabled = lpHiddenPerData;
             }
         }
     }

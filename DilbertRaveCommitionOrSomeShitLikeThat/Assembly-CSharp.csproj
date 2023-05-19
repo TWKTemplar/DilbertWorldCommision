@@ -122,6 +122,9 @@
     <Compile Include="Assets\_Templar\DJCameraControl\Scripts\WhiteListDJCamera.cs" />
     <Compile Include="Assets\_Templar\FloatingQuestionGame\QuestionScreen.cs" />
     <Compile Include="Assets\_Templar\PlayerUI\HidePlayerManager.cs" />
+    <Compile Include="Assets\_Templar\PlayerUI\PlayerSelectionBuilder.cs" />
+    <Compile Include="Assets\_Templar\PlayerUI\PlayerSelectionBuilderMenuSensor.cs" />
+    <Compile Include="Assets\_Templar\PlayerUI\SelectPlayerButton.cs" />
     <Compile Include="Assets\_Templar\PlayersInRoomDoor\Scripts\GeneratePlayerScrollViewer.cs" />
     <Compile Include="Assets\_Templar\PlayersInRoomDoor\Scripts\PlayerUITag.cs" />
     <Compile Include="Assets\_Templar\PlayersInRoomDoor\Scripts\RoomCollider.cs" />

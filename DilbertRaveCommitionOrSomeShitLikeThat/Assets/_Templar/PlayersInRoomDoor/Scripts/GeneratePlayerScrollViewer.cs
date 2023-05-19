@@ -8,11 +8,39 @@ namespace Templar
 {
     public class GeneratePlayerScrollViewer : UdonSharpBehaviour
     {
+        public HidePlayerManager hidePlayerManager;
         public RectTransform buttonParent;
         public RectTransform buttonTemplate;
         public Color ColorBiasForUI = Color.white;
+        public string[] DebugArray;
         public void GenerateUI(VRCPlayerApi[] playersInRoom)
         {
+
+            //Ughhh, tODO: Compare playersInRoom to HiddenPlayers and filter out any in both x.x
+            ////Sort out any Hidden players
+            //VRCPlayerApi[] playersInRoomThatAreNotHidden = new VRCPlayerApi[playersInRoom.Length];
+            //VRCPlayerApi[] HiddenPlayers = hidePlayerManager.GetHiddenPlayers();
+            //DebugArray = new string[playersInRoom.Length];
+            //int index = 0;
+            //for (int j = 0; j < playersInRoom.Length; j++)
+            //{
+            //    for (int i = 0; i < HiddenPlayers.Length; i++)
+            //    {
+            //        if (playersInRoom[j] == HiddenPlayers[i])
+            //        {
+            //            playersInRoom[j] = null;
+            //            break;
+            //        }
+            //        playersInRoomThatAreNotHidden[index] = playersInRoom[j];
+            //        DebugArray[index] = playersInRoom[j].displayName;
+            //        index++;
+            //    }
+            //}
+
+
+
+
+
             // destroy any pre-existing buttons
             for (int i = 0; i < buttonParent.childCount; i++)
             {
